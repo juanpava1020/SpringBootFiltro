@@ -1,5 +1,6 @@
 package com.riwi.FiltroMeta.domain.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -51,5 +52,6 @@ public class QuestionEntity {
         
 
     )
-    private List<OptionQuestionEntity> optionQuestion;
+    @Builder.Default
+    private List<OptionQuestionEntity> optionQuestion = new ArrayList<>();
 }

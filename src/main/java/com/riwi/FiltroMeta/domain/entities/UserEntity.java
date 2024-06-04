@@ -1,5 +1,6 @@
 package com.riwi.FiltroMeta.domain.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -46,6 +47,7 @@ public class UserEntity {
         cascade = CascadeType.ALL,
         orphanRemoval = false
     )
-    private List<SurveyEntity> survey;
+    @Builder.Default
+    private List<SurveyEntity> survey = new ArrayList<>();
     
 }

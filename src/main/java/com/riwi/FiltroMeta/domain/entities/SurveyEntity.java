@@ -1,6 +1,7 @@
 package com.riwi.FiltroMeta.domain.entities;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -54,5 +55,6 @@ public class SurveyEntity {
         cascade = CascadeType.ALL,
         orphanRemoval = false
     )
-    private List<QuestionEntity> question;
+    @Builder.Default
+    private List<QuestionEntity> question = new ArrayList<>();
 }
